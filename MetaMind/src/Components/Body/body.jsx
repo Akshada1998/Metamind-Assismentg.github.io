@@ -6,11 +6,11 @@ import HomePage from "../Browse/homePage";
 const Body = () => {
   const appRouter = createBrowserRouter([
     {
-      path: "/homepage",
+      path: "/",
       element: <Login />,
     },
     {
-      path: "/",
+      path: "/homepage",
       element: <HomePage />,
     },
   ]);

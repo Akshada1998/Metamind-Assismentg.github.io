@@ -21,3 +21,6 @@ export const Upcoming_Movies = "https://api.themoviedb.org/3/movie/upcoming";
 export const Top_Rated_Movies = "https://api.themoviedb.org/3/movie/top_rated";
 
 export const TMDB_img_url = "https://image.tmdb.org/t/p/w500";
+
+export const Search_Movie = "https://api.themoviedb.org/3/search/movie";
+("https://api.themoviedb.org/3/search/movie?query=funnymovie&include_adult=false&language=em-Us&page=1");

@@ -38,8 +38,8 @@ function HomePage() {
           <SearchScreen />
         ) : (
           <>
-            <HomePage />
             <MainScreen />
+            <MovieScreen />
           </>
         )}
       </div>

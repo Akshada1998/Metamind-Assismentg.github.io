@@ -4,172 +4,14 @@ const movieSlice = createSlice({
   name: "movie",
   initialState: {
     toggle: false,
+    open: false,
     trailerMovies: null,
-    NowPlayingMovies: [
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "frozen",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-    ],
-    PopularMovies: [
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "frozen",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-    ],
-    UpcomingMovies: [
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "frozen",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-    ],
-    WatchListMovies: [
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "frozen",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-    ],
-    TopRatedMovies: [
-      {
-        name: "Kunfu Panda",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-      {
-        name: "frozen",
-        imgUrl:
-          "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
-      },
-    ],
+    NowPlayingMovies: null,
+    PopularMovies: null,
+    UpcomingMovies: null,
+    WatchListMovies: null,
+    TopRatedMovies: null,
+    TrailerMovie: null,
   },
   reducers: {
     //action
@@ -192,7 +34,13 @@ const movieSlice = createSlice({
       state.toggle = !state.toggle;
     },
     getTrailerMovie: (state, action) => {
-      state.trailerMovie = action.payload;
+      state.TrailerMovie = action.payload;
+    },
+    setOpen: (state, action) => {
+      state.open = action.payload;
+    },
+    getID: (state, action) => {
+      state.id = action.payload;
     },
   },
 });
@@ -203,5 +51,7 @@ export const {
   getUpcomingMovies,
   getTopRatedMovies,
   getTrailerMovie,
+  setOpen,
+  getID,
 } = movieSlice.actions;
 export default movieSlice.reducer;
